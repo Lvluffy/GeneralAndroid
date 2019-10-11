@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--主色调-->
+    <color name="colorPrimary">@color/color_5096F5</color>
+    <color name="colorPrimaryPressed">@color/color_5E98EE</color>
+    <!--generalColor（通用颜色值）-->
+    <color name="transparent">#00000000</color>
+    <color name="black">@color/color_000000</color>
+    <color name="white">@color/color_FFFFFF</color>
+    <color name="gray">@color/color_F0F0F0</color>
+    <!--commonColor（常见颜色值）-->
+    <color name="color_000000">#000000</color>
+    <color name="color_2D2D2D">#2D2D2D</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_5096F5">#5096F5</color>
+    <color name="color_50BDF5">#50BDF5</color>
+    <color name="color_5E98EE">#5E98EE</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_BBBBBB">#BBBBBB</color>
+    <color name="color_E0E0E0">#E0E0E0</color>
+    <color name="color_F0F0F0">#F0F0F0</color>
+    <color name="color_F6F6F6">#F6F6F6</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+
+    <!--BaseButton<公共按钮><禁用>-->
+    <color name="base_btn_disable">@color/color_BBBBBB</color>
+
+    <!--divider-->
+    <color name="divider">@color/color_E0E0E0</color>
+
+</resources>

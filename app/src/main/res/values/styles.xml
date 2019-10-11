@@ -1,0 +1,31 @@
+<resources>
+    <!--应用主题-->
+    <style name="AppTheme" parent="@style/BaseLayerTheme"></style>
+
+    <!--子项样式(父)-->
+    <style name="base_item_style_base">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/y50</item>
+        <item name="android:background">
+            @drawable/base_btn_normal_radius_false_stroke_false_white_selector
+        </item>
+    </style>
+
+    <!--子项样式(子-外部)-->
+    <style name="base_item_style_child_external">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/x12</item>
+        <item name="android:paddingRight">@dimen/x12</item>
+    </style>
+
+    <!--子项样式(子-内部)-->
+    <style name="base_item_style_child_internal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">@dimen/x12</item>
+        <item name="android:paddingRight">@dimen/x12</item>
+    </style>
+</resources>

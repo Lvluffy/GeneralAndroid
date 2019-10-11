@@ -1,0 +1,109 @@
+<resources>
+    <!--公共文案-->
+    <string name="base_confirm">确认</string>
+    <string name="base_confirmed">已确认</string>
+    <string name="base_sure">确定</string>
+    <string name="base_cancel">取消</string>
+    <string name="base_neutral">再想想</string>
+    <string name="base_next">下一步</string>
+    <string name="base_submit">提交</string>
+    <string name="base_submitted">已提交</string>
+    <string name="base_hint">提示</string>
+    <string name="base_title">标题</string>
+    <string name="base_describe">描述</string>
+    <string name="base_content">内容</string>
+    <string name="base_more">更多</string>
+    <string name="base_share">分享</string>
+    <string name="base_save">保存</string>
+    <string name="base_saved">已保存</string>
+    <string name="base_complete">完成</string>
+    <string name="base_send">发送</string>
+    <string name="base_continue">继续</string>
+    <string name="base_exit">退出</string>
+    <string name="base_refresh">刷新</string>
+    <string name="base_upload">上传</string>
+    <string name="base_pack_up">收起</string>
+    <string name="base_expand">展开</string>
+    <string name="base_meassge_readed">已读</string>
+    <string name="base_message_unread">未读</string>
+    <string name="base_refused">拒绝</string>
+    <string name="base_accept">接受</string>
+    <string name="base_accepted">已接受</string>
+    <string name="base_add">添加</string>
+    <string name="base_delete">删除</string>
+    <string name="base_modify">修改</string>
+
+    <!--公共文案之登录注册模块-->
+    <string name="base_register">注册</string>
+    <string name="base_login">登录</string>
+    <string name="base_login_quick">验证码登录</string>
+    <string name="base_login_account">密码登录</string>
+    <string name="base_login_third_party_account">第三方账号登录</string>
+    <string name="base_login_qq">QQ登录</string>
+    <string name="base_login_wx">微信登录</string>
+    <string name="base_login_wb">微博登录</string>
+    <string name="base_mobile_phone">手机</string>
+    <string name="base_mobile_phone_number">手机号</string>
+    <string name="base_mobile_phone_number_input_hint">请输入手机号</string>
+    <string name="base_mobile_phone_number_input_change_hint">请输入要更换的手机号</string>
+    <string name="base_mobile_phone_number_modify">修改手机号</string>
+    <string name="base_password_set">设置密码</string>
+    <string name="base_password_reset">重置密码</string>
+    <string name="base_password_forget">忘记密码</string>
+    <string name="base_password_modify">修改密码</string>
+    <string name="base_password">密码</string>
+    <string name="base_password_input_hint">请输入密码</string>
+    <string name="base_password_new_input_hint">请输入新密码</string>
+    <string name="base_nickname_modify">修改昵称</string>
+    <string name="base_phone_modify">更换手机号</string>
+    <string name="base_mailbox">邮箱</string>
+    <string name="base_name">姓名</string>
+    <string name="base_rule_text">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+
+    <!--公共文案之用户中心模块-->
+    <string name="base_pay">合同支付</string>
+    <string name="base_withdrawal">提现</string>
+    <string name="base_user_info">个人信息</string>
+    <string name="base_head_portrait">头像</string>
+    <string name="base_nickname">昵称</string>
+    <string name="base_gender">性别</string>
+    <string name="base_camera">相机</string>
+    <string name="base_photo_album">相册</string>
+    <string name="base_set">系统设置</string>
+    <string name="base_about">关于%1$s</string>
+    <string name="base_clear_cache">清理缓存</string>
+    <string name="base_clear_cache_success">清理成功</string>
+    <string name="base_feedback">意见反馈</string>
+    <string name="base_logout">退出登录</string>
+    <string name="base_infomation_center">推荐资讯</string>
+    <string name="base_invite_friends">邀请好友</string>
+    <string name="base_common_problem">常见问题</string>
+
+    <!--公共文案之验证码-->
+    <string name="base_verification_code">验证码</string>
+    <string name="base_verification_code_voice">语音验证码</string>
+    <string name="base_verification_code_get">获取验证码</string>
+    <string name="base_verification_code_input_hint">请输入验证码</string>
+
+    <!--倒计时-->
+    <string name="base_countdown_seconds_later_retry">(%1$s)重新获取</string>
+    <string name="base_countdown_again_obtain">获取验证码</string>
+
+    <!--加载-->
+    <string name="base_load_end">已经全部加载完毕</string>
+    <string name="base_loading">正在加载中...</string>
+    <string name="base_load_failed">加载失败，请点我重试</string>
+
+    <!--网络提示语-->
+    <string name="base_network_hint_1">正在使用数据流量，是否继续？</string>
+    <string name="base_network_hint_2">当前为2G/3G/4G，将会消耗手机流量</string>
+
+    <!--异常提示-->
+    <string name="error_sdcard_unavailable">SD卡不可用</string>
+    <string name="error_permission_no">请开启权限后才可使用</string>
+    <string name="error_permission_no_camera">没有权限，启动相机失败</string>
+    <string name="error_permission_no_record_audio">没有权限，启动麦克风失败</string>
+    <string name="error_net_error">当前网络不可用，请检查网络设置</string>
+    <string name="error_save_avatar_error">亲，据说JPG或PNG格式的头像才更美腻呢</string>
+
+</resources>

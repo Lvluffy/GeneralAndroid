@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--加载更多布局-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/view_load_more_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/y10"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x4" />
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x4"
+            android:text="@string/base_loading"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_13" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/view_load_more_failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/y10"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/base_load_failed"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/view_load_more_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/y10"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/base_load_end"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13" />
+
+    </FrameLayout>
+
+</FrameLayout>
