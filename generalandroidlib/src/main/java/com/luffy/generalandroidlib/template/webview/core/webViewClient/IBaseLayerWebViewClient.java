@@ -1,5 +1,6 @@
 package com.luffy.generalandroidlib.template.webview.core.webViewClient;
 
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 
@@ -26,4 +27,13 @@ public interface IBaseLayerWebViewClient {
      * @return
      */
     boolean shouldOverrideUrlLoadingBase(WebView view, WebResourceRequest request);
+
+    /**
+     * 网页收到错误
+     *
+     * @param view
+     * @param request
+     * @param error
+     */
+    void onReceivedErrorBase(WebView view, WebResourceRequest request, WebResourceError error);
 }

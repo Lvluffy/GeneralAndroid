@@ -2,6 +2,7 @@ package com.luffy.generalandroidlib.template.webview.core.webViewClient;
 
 import android.net.http.SslError;
 import android.webkit.SslErrorHandler;
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -43,4 +44,11 @@ public class BaseLayerWebViewClient extends WebViewClient {
         super.onReceivedSslError(view, handler, error);
     }
 
+    @Override
+    public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+        if (mIBaseLayerWebViewClient != null) {
+            mIBaseLayerWebViewClient.onReceivedErrorBase(view, request, error);
+        }
+        super.onReceivedError(view, request, error);
+    }
 }

@@ -3,6 +3,7 @@ package com.luffy.generalandroidlib.template.webview.core.ui;
 import android.os.Build;
 import android.text.TextUtils;
 import android.view.View;
+import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -216,6 +217,12 @@ public abstract class BaseLayerWebviewFragment extends BaseLayerFragment impleme
             view.loadUrl(request.toString());
         }
         return true;
+    }
+
+    @Override
+    public void onReceivedErrorBase(WebView view, WebResourceRequest request, WebResourceError error) {
+        view.loadUrl("about:blank");// 避免出现默认的错误界面
+        view.removeAllViews();
     }
 
     @Override
