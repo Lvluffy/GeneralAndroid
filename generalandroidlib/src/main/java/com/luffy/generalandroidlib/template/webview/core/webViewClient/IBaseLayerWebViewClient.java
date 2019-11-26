@@ -1,5 +1,8 @@
 package com.luffy.generalandroidlib.template.webview.core.webViewClient;
 
+import android.graphics.Bitmap;
+import android.net.http.SslError;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
@@ -27,6 +30,32 @@ public interface IBaseLayerWebViewClient {
      * @return
      */
     boolean shouldOverrideUrlLoadingBase(WebView view, WebResourceRequest request);
+
+    /**
+     * 页面开始
+     *
+     * @param view
+     * @param url
+     * @param favicon
+     */
+    void onPageStartedBase(WebView view, String url, Bitmap favicon);
+
+    /**
+     * 页面结束
+     *
+     * @param view
+     * @param url
+     */
+    void onPageFinishedBase(WebView view, String url);
+
+    /**
+     * 网页收到Ssl异常
+     *
+     * @param view
+     * @param handler
+     * @param error
+     */
+    void onReceivedSslErrorBase(WebView view, SslErrorHandler handler, SslError error);
 
     /**
      * 网页收到错误

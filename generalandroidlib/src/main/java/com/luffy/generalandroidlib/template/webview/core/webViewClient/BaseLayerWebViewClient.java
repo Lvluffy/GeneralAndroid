@@ -1,5 +1,6 @@
 package com.luffy.generalandroidlib.template.webview.core.webViewClient;
 
+import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceError;
@@ -38,9 +39,26 @@ public class BaseLayerWebViewClient extends WebViewClient {
     }
 
     @Override
+    public void onPageStarted(WebView view, String url, Bitmap favicon) {
+        if (mIBaseLayerWebViewClient != null) {
+            mIBaseLayerWebViewClient.onPageStartedBase(view, url, favicon);
+        }
+        super.onPageStarted(view, url, favicon);
+    }
+
+    @Override
+    public void onPageFinished(WebView view, String url) {
+        if (mIBaseLayerWebViewClient != null) {
+            mIBaseLayerWebViewClient.onPageFinishedBase(view, url);
+        }
+        super.onPageFinished(view, url);
+    }
+
+    @Override
     public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-        /*接受所有网站的证书*/
-        handler.proceed();
+        if (mIBaseLayerWebViewClient != null) {
+            mIBaseLayerWebViewClient.onReceivedSslErrorBase(view, handler, error);
+        }
         super.onReceivedSslError(view, handler, error);
     }
 
@@ -51,4 +69,5 @@ public class BaseLayerWebViewClient extends WebViewClient {
         }
         super.onReceivedError(view, request, error);
     }
+
 }

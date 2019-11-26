@@ -1,9 +1,12 @@
 package com.luffy.generalandroidlib.template.webview.core.ui;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.net.http.SslError;
 import android.os.Build;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
@@ -218,6 +221,22 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
             view.loadUrl(request.toString());
         }
         return true;
+    }
+
+    @Override
+    public void onPageStartedBase(WebView view, String url, Bitmap favicon) {
+
+    }
+
+    @Override
+    public void onPageFinishedBase(WebView view, String url) {
+
+    }
+
+    @Override
+    public void onReceivedSslErrorBase(WebView view, SslErrorHandler handler, SslError error) {
+        /*接受所有网站的证书*/
+        handler.proceed();
     }
 
     @Override
