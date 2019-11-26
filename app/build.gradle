@@ -43,13 +43,13 @@ dependencies {
     /**project*/
     /*generalandroidlib*/
     compile project(':generalandroidlib')
-    /*底栏布局*/
-    compile 'com.github.Lvluffy:BottomBarLayout:1.0.0'
-    /*网络框架*/
-    compile 'com.github.Lvluffy:network:1.0.2'
+    /*通用网络*/
+    compile 'com.github.Lvluffy:GeneralNetwork:1.0.1'
     /*通用工具*/
-    compile 'com.github.Lvluffy:GeneralUtils:1.0.0'
+    compile 'com.github.Lvluffy:GeneralUtils:1.0.2'
     /*通用弹框*/
-    compile 'com.github.Lvluffy:GeneralDialog:1.0.0'
+    compile 'com.github.Lvluffy:GeneralDialog:1.0.2'
+    /*通用视图*/
+    compile 'com.github.Lvluffy:GeneralView:1.1.5'
 }
 

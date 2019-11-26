@@ -3,8 +3,6 @@ package com.luffy.generalandroid.ui.module.main.entrance;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
-import com.luffy.bottombarlayoutlib.BottomBarItem;
-import com.luffy.bottombarlayoutlib.BottomBarLayout;
 import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.base.BaseActivity;
 import com.luffy.generalandroid.ui.module.main.type.HomeFragment;
@@ -12,6 +10,8 @@ import com.luffy.generalandroid.ui.module.main.type.MessageFragment;
 import com.luffy.generalandroid.ui.module.main.type.UserCenterFragment;
 import com.luffy.generalandroidlib.android.fragment.BaseLayerFragmentStatePageAdapter;
 import com.luffy.generalutilslib.utils.StatusBarUtils;
+import com.luffy.generalviewlib.customView.bottomBar.BottomBarItem;
+import com.luffy.generalviewlib.customView.bottomBar.BottomBarLayout;
 
 import java.util.ArrayList;
 import java.util.List;
