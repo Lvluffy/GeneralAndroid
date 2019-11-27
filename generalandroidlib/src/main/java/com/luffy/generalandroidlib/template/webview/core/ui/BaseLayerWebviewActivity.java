@@ -241,8 +241,7 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
 
     @Override
     public void onReceivedErrorBase(WebView view, WebResourceRequest request, WebResourceError error) {
-        view.loadUrl("about:blank");// 避免出现默认的错误界面
-        view.removeAllViews();
+
     }
 
     @Override

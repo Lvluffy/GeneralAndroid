@@ -1,6 +1,10 @@
 package com.luffy.generalandroid.ui.module.web;
 
 
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+
 import com.luffy.generalandroidlib.template.webview.core.ui.BaseLayerWebviewActivity;
 
 import java.util.Map;
