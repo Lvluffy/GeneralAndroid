@@ -22,6 +22,11 @@ public interface IBaseLayerWeb {
     void configView();
 
     /**
+     * 处理异常界面
+     */
+    void handlerErrorView();
+
+    /**
      * 处理Url
      */
     void handlerUrl();

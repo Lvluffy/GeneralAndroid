@@ -6,11 +6,13 @@ import android.net.http.SslError;
 import android.os.Build;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.LinearLayout;
 
 import com.luffy.generalandroidlib.R;
 import com.luffy.generalandroidlib.android.activity.BaseLayerActivity;
@@ -35,6 +37,9 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
 
     protected WebView webview;
     protected String requestUrl;
+    protected boolean isError;
+    protected LinearLayout webParentView;
+    protected View errorView;
 
     @Override
     public int setLayoutView() {
@@ -51,6 +56,7 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
         findView();
         init();
         configView();
+        handlerErrorView();
         handlerUrl();
         handlerShareUrl();
         loadUrl();
@@ -59,6 +65,7 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
     @Override
     public void findView() {
         webview = (WebView) findViewById(R.id.webview);
+        webParentView = (LinearLayout) webview.getParent();
     }
 
     @Override
@@ -96,6 +103,11 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
         }
         webview.setWebChromeClient(new BaseLayerWebChromeClient(mContext, webview, this));
         webview.setWebViewClient(new BaseLayerWebViewClient(this));
+    }
+
+    @Override
+    public void handlerErrorView() {
+
     }
 
     @Override
@@ -230,7 +242,10 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
 
     @Override
     public void onPageFinishedBase(WebView view, String url) {
-
+        if (!isError) {
+            webParentView.removeAllViews();
+            webParentView.addView(webview);
+        }
     }
 
     @Override
@@ -241,7 +256,8 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
 
     @Override
     public void onReceivedErrorBase(WebView view, WebResourceRequest request, WebResourceError error) {
-
+        isError = true;
+        webParentView.removeAllViews();
     }
 
     @Override
