@@ -76,8 +76,8 @@ public abstract class BaseLayerTabIndicatorActivity extends BaseLayerActivity im
 
     @Override
     public void findView() {
-        mMagicIndicator = (MagicIndicator) findViewById(R.id.magicIndicator);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mMagicIndicator = findViewById(R.id.magicIndicator);
+        mViewPager = findViewById(R.id.viewPager);
     }
 
     @Override

@@ -62,7 +62,7 @@ public abstract class BaseLayerWebviewFragment extends BaseLayerFragment impleme
 
     @Override
     public void findView() {
-        webview = (WebView) rootView.findViewById(R.id.webview);
+        webview = rootView.findViewById(R.id.webview);
         webParentView = (LinearLayout) webview.getParent();
     }
 

@@ -76,7 +76,7 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
+            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
                 onNetChange(NetUtils.getInstance().isConnected(BaseLayerApplication.getInstance()));
             }
         }
@@ -169,17 +169,17 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
      */
     @Override
     public void initPublicTitlebar(LayoutInflater inflater) {
-        navLayout = (RelativeLayout) findViewById(R.id.nav_layout);
-        navBack = (LinearLayout) findViewById(R.id.nav_back);
-        navBackImg = (ImageView) findViewById(R.id.nav_back_img);
-        navCloseImg = (ImageView) findViewById(R.id.nav_close_img);
-        navBackTxt = (TextView) findViewById(R.id.nav_back_txt);
-        navTitle = (TextView) findViewById(R.id.nav_title);
-        navMore = (LinearLayout) findViewById(R.id.nav_more);
-        navMoreImg = (ImageView) findViewById(R.id.nav_more_img);
-        navMoreTxt = (TextView) findViewById(R.id.nav_more_txt);
+        navLayout = findViewById(R.id.nav_layout);
+        navBack = findViewById(R.id.nav_back);
+        navBackImg = findViewById(R.id.nav_back_img);
+        navCloseImg = findViewById(R.id.nav_close_img);
+        navBackTxt = findViewById(R.id.nav_back_txt);
+        navTitle = findViewById(R.id.nav_title);
+        navMore = findViewById(R.id.nav_more);
+        navMoreImg = findViewById(R.id.nav_more_img);
+        navMoreTxt = findViewById(R.id.nav_more_txt);
         navDivider = findViewById(R.id.nav_divider);
-        baseChildLayout = (FrameLayout) findViewById(R.id.base_child_layout);
+        baseChildLayout = findViewById(R.id.base_child_layout);
         navLayout.setOnClickListener(this);
         navBack.setOnClickListener(this);
         navCloseImg.setOnClickListener(this);
@@ -363,7 +363,7 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
                 mLoadingDialog = new LoadingDialog(mContext);
             }
             mLoadingDialog.show();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
     }
@@ -378,8 +378,7 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
                 mLoadingDialog = new LoadingDialog(mContext);
             }
             mLoadingDialog.setText(content).show();
-        } catch (Exception e) {
-
+        } catch (Exception ignored) {
         }
     }
 
@@ -395,8 +394,7 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
             if (mLoadingDialog != null) {
                 mLoadingDialog.dismiss();
             }
-        } catch (Exception e) {
-
+        } catch (Exception ignored) {
         }
     }
 

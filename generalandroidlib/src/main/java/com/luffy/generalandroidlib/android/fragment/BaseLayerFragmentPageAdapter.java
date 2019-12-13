@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class BaseLayerFragmentPageAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> fragmentList = new ArrayList<Fragment>();
+    private List<Fragment> fragmentList = new ArrayList<>();
 
     public BaseLayerFragmentPageAdapter(List<Fragment> fragmentList, FragmentManager fragmentManager) {
         super(fragmentManager);

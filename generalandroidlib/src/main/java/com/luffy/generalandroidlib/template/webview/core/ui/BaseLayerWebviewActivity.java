@@ -64,7 +64,7 @@ public abstract class BaseLayerWebviewActivity extends BaseLayerActivity impleme
 
     @Override
     public void findView() {
-        webview = (WebView) findViewById(R.id.webview);
+        webview = findViewById(R.id.webview);
         webParentView = (LinearLayout) webview.getParent();
     }
 

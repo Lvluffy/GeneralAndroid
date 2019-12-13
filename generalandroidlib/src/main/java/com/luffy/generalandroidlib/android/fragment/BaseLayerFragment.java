@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -85,7 +86,7 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-            if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
+            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
                 onNetChange(NetUtils.getInstance().isConnected(BaseLayerApplication.getInstance()));
             }
         }
@@ -106,7 +107,7 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         /*初始化界面*/
         if (rootView == null) {
             mContext = getActivity();
@@ -196,17 +197,17 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
      */
     @Override
     public void initPublicTitlebar(LayoutInflater inflater) {
-        navLayout = (RelativeLayout) rootView.findViewById(R.id.nav_layout);
-        navBack = (LinearLayout) rootView.findViewById(R.id.nav_back);
-        navBackImg = (ImageView) rootView.findViewById(R.id.nav_back_img);
-        navCloseImg = (ImageView) rootView.findViewById(R.id.nav_close_img);
-        navBackTxt = (TextView) rootView.findViewById(R.id.nav_back_txt);
-        navTitle = (TextView) rootView.findViewById(R.id.nav_title);
-        navMore = (LinearLayout) rootView.findViewById(R.id.nav_more);
-        navMoreImg = (ImageView) rootView.findViewById(R.id.nav_more_img);
-        navMoreTxt = (TextView) rootView.findViewById(R.id.nav_more_txt);
+        navLayout = rootView.findViewById(R.id.nav_layout);
+        navBack = rootView.findViewById(R.id.nav_back);
+        navBackImg = rootView.findViewById(R.id.nav_back_img);
+        navCloseImg = rootView.findViewById(R.id.nav_close_img);
+        navBackTxt = rootView.findViewById(R.id.nav_back_txt);
+        navTitle = rootView.findViewById(R.id.nav_title);
+        navMore = rootView.findViewById(R.id.nav_more);
+        navMoreImg = rootView.findViewById(R.id.nav_more_img);
+        navMoreTxt = rootView.findViewById(R.id.nav_more_txt);
         navDivider = rootView.findViewById(R.id.nav_divider);
-        baseChildLayout = (FrameLayout) rootView.findViewById(R.id.base_child_layout);
+        baseChildLayout = rootView.findViewById(R.id.base_child_layout);
         navLayout.setOnClickListener(this);
         navBack.setOnClickListener(this);
         navCloseImg.setOnClickListener(this);
@@ -381,7 +382,7 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
                 mLoadingDialog = new LoadingDialog(mContext);
             }
             mLoadingDialog.show();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
     }
@@ -396,7 +397,7 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
                 mLoadingDialog = new LoadingDialog(mContext);
             }
             mLoadingDialog.setText(content).show();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
     }
@@ -413,7 +414,7 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
             if (mLoadingDialog != null) {
                 mLoadingDialog.dismiss();
             }
-        } catch (Exception e) {
+        } catch (Exception ignored) {
 
         }
     }

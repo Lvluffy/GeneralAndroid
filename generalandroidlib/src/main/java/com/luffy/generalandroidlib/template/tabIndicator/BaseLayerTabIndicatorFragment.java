@@ -70,8 +70,8 @@ public abstract class BaseLayerTabIndicatorFragment extends BaseLayerFragment im
 
     @Override
     public void findView() {
-        mMagicIndicator = (MagicIndicator) rootView.findViewById(R.id.magicIndicator);
-        mViewPager = (ViewPager) rootView.findViewById(R.id.viewPager);
+        mMagicIndicator = rootView.findViewById(R.id.magicIndicator);
+        mViewPager = rootView.findViewById(R.id.viewPager);
     }
 
     @Override

@@ -44,12 +44,12 @@ dependencies {
     /*generalandroidlib*/
     compile project(':generalandroidlib')
     /*通用网络*/
-    compile 'com.github.Lvluffy:GeneralNetwork:1.0.1'
+    compile 'com.github.Lvluffy:GeneralNetwork:1.0.2'
     /*通用工具*/
-    compile 'com.github.Lvluffy:GeneralUtils:1.0.2'
+    compile 'com.github.Lvluffy:GeneralUtils:1.0.9'
     /*通用弹框*/
-    compile 'com.github.Lvluffy:GeneralDialog:1.0.2'
+    compile 'com.github.Lvluffy:GeneralDialog:1.0.6'
     /*通用视图*/
-    compile 'com.github.Lvluffy:GeneralView:1.1.5'
+    compile 'com.github.Lvluffy:GeneralView:1.1.9'
 }
 

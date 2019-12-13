@@ -17,6 +17,7 @@
             style="?android:attr/progressBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/x4"
             android:layout_marginRight="@dimen/x4" />
 
         <TextView
@@ -24,6 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/x4"
+            android:layout_marginStart="@dimen/x4"
             android:text="@string/base_loading"
             android:textColor="@color/color_666666"
             android:textSize="@dimen/text_size_13" />

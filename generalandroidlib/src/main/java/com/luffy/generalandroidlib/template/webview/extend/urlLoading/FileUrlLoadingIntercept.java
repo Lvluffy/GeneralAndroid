@@ -25,7 +25,7 @@ public class FileUrlLoadingIntercept extends BaseUrlLoadingIntercept {
                 || url.endsWith(".apk"))) {
             try {
                 IntentUtils.getInstance().openBrowser(mContext, url);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return true;
         }

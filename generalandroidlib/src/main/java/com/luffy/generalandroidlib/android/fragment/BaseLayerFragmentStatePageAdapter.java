@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class BaseLayerFragmentStatePageAdapter extends FragmentStatePagerAdapter {
 
-    private List<Fragment> fragmentList = new ArrayList<Fragment>();
+    private List<Fragment> fragmentList = new ArrayList<>();
 
     public BaseLayerFragmentStatePageAdapter(List<Fragment> fragmentList, FragmentManager fragmentManager) {
         super(fragmentManager);

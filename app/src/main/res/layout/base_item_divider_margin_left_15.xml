@@ -3,4 +3,5 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/space_0.5"
     android:layout_marginLeft="@dimen/x15"
+    android:layout_marginStart="@dimen/x15"
     android:background="@color/divider" />

@@ -1,7 +1,10 @@
 package com.luffy.generalandroidlib.template.listView.callback;
 
 /**
- * Created by lvlufei on 2019/4/29.
+ * Created by lvlufei on 2019/4/29
+ *
+ * @name
+ * @desc
  */
 public interface IBaseLayerList {
     /**

@@ -25,8 +25,6 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.bottom_bar)
     BottomBarLayout mBottomBarLayout;
 
-    private List<Fragment> mFragments;
-
     HomeFragment mHomeFragment;
     MessageFragment mMessageFragment;
     UserCenterFragment mUserCenterFragment;
@@ -48,10 +46,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        /**沉浸式状态栏*/
+        //沉浸式状态栏
         StatusBarUtils.getInstance().setStatusBar(mContext, R.color.white, true);
-        /*初始化*/
-        mFragments = new ArrayList<>();
+        //初始化
+        List<Fragment> mFragments = new ArrayList<>();
         mHomeFragment = new HomeFragment();
         mMessageFragment = new MessageFragment();
         mUserCenterFragment = new UserCenterFragment();
@@ -66,14 +64,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemSelected(BottomBarItem bottomBarItem, int i, int position) {
                 switch (position) {
-                    /**首页*/
+                    //首页
                     case 0:
-                        /*沉浸式状态栏*/
+                        //沉浸式状态栏
                         StatusBarUtils.getInstance().setStatusBar(mContext, R.color.white, true);
                         break;
-                    /**我的*/
+                    //我的
                     case 2:
-                        /*沉浸式状态栏*/
+                        //沉浸式状态栏
                         StatusBarUtils.getInstance().setStatusBar(mContext, R.color.colorPrimary, false);
                         break;
                 }

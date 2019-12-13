@@ -17,7 +17,7 @@ public class ShortLinkUrlLoadingIntercept extends BaseUrlLoadingIntercept {
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
             try {
                 IntentUtils.getInstance().openBrowser(mContext, url);
-            } catch (Exception e) {
+            } catch (Exception ignored) {
             }
             return true;
         }

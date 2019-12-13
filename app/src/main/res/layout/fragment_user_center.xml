@@ -46,13 +46,13 @@
                     android:layout_gravity="center"
                     android:padding="@dimen/x1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/base_default_icon" />
+                    android:src="@drawable/base_default_icon"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/txt_user_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/y13"
                     android:textColor="@color/color_333333"
@@ -71,7 +71,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <!--设置-->
@@ -91,13 +91,16 @@
                         android:layout_height="@dimen/y15"
                         android:layout_centerVertical="true"
                         android:scaleType="fitXY"
-                        android:src="@drawable/user_center_set" />
+                        android:src="@drawable/user_center_set"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="@dimen/x7"
+                        android:layout_marginStart="@dimen/x7"
+                        android:layout_toEndOf="@+id/img_set"
                         android:layout_toRightOf="@+id/img_set"
                         android:gravity="center|left"
                         android:text="@string/base_set"

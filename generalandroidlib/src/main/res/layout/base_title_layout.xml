@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/x20"
@@ -22,7 +23,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="center"
-            android:src="@drawable/base_nav_back" />
+            android:src="@drawable/base_nav_back"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/nav_back_txt"
@@ -41,10 +43,13 @@
         android:id="@+id/nav_close_img"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/nav_back"
         android:layout_toRightOf="@+id/nav_back"
+        android:paddingEnd="@dimen/x20"
         android:paddingRight="@dimen/x20"
         android:scaleType="center"
-        android:src="@drawable/base_nav_finish"/>
+        android:src="@drawable/base_nav_finish"
+        tools:ignore="ContentDescription" />
 
     <!--中间标题-->
     <TextView
@@ -66,6 +71,7 @@
         android:id="@+id/nav_more"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:orientation="horizontal"
@@ -78,7 +84,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:scaleType="center"
-            android:src="@drawable/base_nav_back" />
+            android:src="@drawable/base_nav_back"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/nav_more_txt"

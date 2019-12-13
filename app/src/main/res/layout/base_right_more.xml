@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?><!--公共子项更多，可点击提示布局-->
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/x15"
     android:layout_height="@dimen/x15"
+    android:layout_alignParentEnd="true"
     android:layout_alignParentRight="true"
     android:layout_centerVertical="true"
-    android:src="@drawable/base_right_more" />
+    android:src="@drawable/base_right_more"
+    tools:ignore="ContentDescription" />
