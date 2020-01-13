@@ -30,9 +30,9 @@ ext {
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.2",
-            applicationId    : "com.luffy.generalandroid",
             minSdkVersion    : 15,
             targetSdkVersion : 28,
+            applicationId    : "com.luffy.generalandroid",
             versionCode      : 109,
             versionName      : "1.0.9"
     ]
