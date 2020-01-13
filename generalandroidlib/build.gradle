@@ -48,9 +48,9 @@ dependencies {
     compileOnly rootProject.ext.supportDepends["appcompat-v7" ]
     compileOnly rootProject.ext.supportDepends["recyclerview-v7" ]
     // 通用适配器
-    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     // 指示器
-    implementation 'com.github.Lvluffy:Indicator:1.0.0'
+    compile 'com.github.Lvluffy:Indicator:1.0.0'
     // 通用工具
     compileOnly 'com.github.Lvluffy:GeneralUtils:1.0.0'
     // 通用弹框
