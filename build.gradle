@@ -31,7 +31,7 @@ ext {
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.2",
             applicationId    : "com.luffy.generalandroid",
-            minSdkVersion    : 16,
+            minSdkVersion    : 15,
             targetSdkVersion : 28,
             versionCode      : 109,
             versionName      : "1.0.9"
