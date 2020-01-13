@@ -44,7 +44,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     /**support*/
-    api rootProject.ext.supportLibs
+    compileOnly rootProject.ext.supportDepends["support-v4" ]
+    compileOnly rootProject.ext.supportDepends["appcompat-v7" ]
+    compileOnly rootProject.ext.supportDepends["recyclerview-v7" ]
     // 通用适配器
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     // 指示器
