@@ -139,6 +139,12 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        detachViewForPresenter();
+    }
+
+    @Override
     public void onDetach() {
         super.onDetach();
         isAttach = false;

@@ -56,4 +56,9 @@ public interface IBaseLayerUIInit<T> {
      * 初始化Presenter
      */
     void initPresenter();
+
+    /**
+     * 为Presenter分离视图
+     */
+    void detachViewForPresenter();
 }

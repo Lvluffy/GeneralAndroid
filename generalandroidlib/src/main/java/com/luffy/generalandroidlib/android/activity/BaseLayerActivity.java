@@ -139,6 +139,12 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        detachViewForPresenter();
+    }
+
+    @Override
     public void onClick(View view) {
         int i = view.getId();
         if (i == R.id.nav_layout) {
