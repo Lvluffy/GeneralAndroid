@@ -22,6 +22,11 @@ public class MessageFragment extends BaseFragment {
     }
 
     @Override
+    public void detachViewForPresenter() {
+
+    }
+
+    @Override
     public void initView() {
 
     }

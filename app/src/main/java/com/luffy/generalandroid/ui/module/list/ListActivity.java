@@ -34,6 +34,11 @@ public class ListActivity extends BaseListActivity {
     }
 
     @Override
+    public void detachViewForPresenter() {
+        
+    }
+
+    @Override
     public void initReceiveData() {
 
     }

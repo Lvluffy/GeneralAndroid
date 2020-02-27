@@ -59,6 +59,11 @@ public class HomeFragment extends BaseListFragment {
     }
 
     @Override
+    public void detachViewForPresenter() {
+
+    }
+
+    @Override
     public void initReceiveData() {
 
     }

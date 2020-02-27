@@ -44,6 +44,11 @@ public class WebActivity extends BaseLayerWebviewActivity {
     }
 
     @Override
+    public void detachViewForPresenter() {
+
+    }
+
+    @Override
     public void initReceiveData() {
         parameter = (Map<String, Object>) getIntent().getSerializableExtra("parameter");
         if (parameter != null && parameter.size() > 0) {

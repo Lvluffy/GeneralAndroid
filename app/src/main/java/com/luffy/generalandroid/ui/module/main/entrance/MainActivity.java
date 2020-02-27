@@ -45,6 +45,11 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
+    public void detachViewForPresenter() {
+
+    }
+
+    @Override
     public void initView() {
         //沉浸式状态栏
         StatusBarUtils.getInstance().setStatusBar(mContext, R.color.white, true);

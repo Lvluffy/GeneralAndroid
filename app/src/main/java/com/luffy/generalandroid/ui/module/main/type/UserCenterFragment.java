@@ -28,6 +28,11 @@ public class UserCenterFragment extends BaseFragment {
     }
 
     @Override
+    public void detachViewForPresenter() {
+
+    }
+
+    @Override
     public void initView() {
 
     }
