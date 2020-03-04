@@ -54,5 +54,6 @@ dependencies {
     // 通用工具
     compileOnly 'com.github.Lvluffy:GeneralUtils:1.0.0'
     // 通用弹框
-    compileOnly 'com.github.Lvluffy:GeneralDialog:1.0.0'
+    compileOnly 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
+    compileOnly 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'
 }

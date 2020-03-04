@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.luffy.generaldialoglib.toast.ToastBuilder;
+import com.luffy.toastlib.ToastBuilder;
 
 /**
  * Created by lvlufei on 2019/6/20

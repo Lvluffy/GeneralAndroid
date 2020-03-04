@@ -2,7 +2,7 @@ package com.luffy.generalandroidlib.android.helper;
 
 import com.luffy.generalandroidlib.R;
 import com.luffy.generalandroidlib.android.application.BaseLayerApplication;
-import com.luffy.generaldialoglib.toast.ToastBuilder;
+import com.luffy.toastlib.ToastBuilder;
 import com.luffy.generalutilslib.utils.NetUtils;
 
 /**
