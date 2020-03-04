@@ -22,13 +22,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
 import com.luffy.generalandroidlib.R;
 import com.luffy.generalandroidlib.android.application.BaseLayerApplication;
 import com.luffy.generalandroidlib.android.callback.basetitle.IBaseLayerTitle;
 import com.luffy.generalandroidlib.android.callback.loading.IBaseLayerLoading;
 import com.luffy.generalandroidlib.android.callback.network.IBaseLayerNetwork;
 import com.luffy.generalandroidlib.android.callback.ui.IBaseLayerUIInit;
-import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
 import com.luffy.generalutilslib.utils.NetUtils;
 
 /**
