@@ -46,8 +46,8 @@ dependencies {
     implementation 'com.jakewharton:butterknife:9.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
     /**project*/
-    /*generalandroidlib*/
-    implementation project(':generalandroidlib')
+    implementation project(':componentlib')
+    implementation project(':recyclerviewlib')
     /*通用网络*/
     implementation 'com.github.Lvluffy:GeneralNetwork:1.0.2'
     /*通用工具*/

@@ -2,7 +2,7 @@ package com.luffy.generalandroid.base;
 
 import android.view.View;
 
-import com.luffy.generalandroidlib.android.list.viewHolder.BaseLayerViewHolder;
+import com.luffy.recyclerviewlib.viewHolder.BaseLayerViewHolder;
 
 import butterknife.ButterKnife;
 

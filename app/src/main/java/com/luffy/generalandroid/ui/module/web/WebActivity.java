@@ -9,8 +9,8 @@ import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 
+import com.luffy.componentlib.webview.core.ui.BaseLayerWebviewActivity;
 import com.luffy.generalandroid.R;
-import com.luffy.generalandroidlib.template.webview.core.ui.BaseLayerWebviewActivity;
 import com.luffy.generalviewlib.combinationView.child.empty.GeneralEmpty;
 
 import java.util.Map;

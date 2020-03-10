@@ -5,8 +5,8 @@ import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.base.BaseListActivity;
 import com.luffy.generalandroid.manager.TestDataManager;
 import com.luffy.generalandroid.mvp.model.ListBean;
-import com.luffy.generalandroidlib.android.list.loader.BaseLayerLoadMoreView;
 import com.luffy.generalutilslib.utils.RxTimerUtils;
+import com.luffy.recyclerviewlib.loader.BaseLayerLoadMoreView;
 
 import java.util.concurrent.TimeUnit;
 

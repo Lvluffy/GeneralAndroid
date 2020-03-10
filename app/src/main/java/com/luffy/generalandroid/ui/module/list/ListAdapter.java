@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.mvp.model.ListBean;
 import com.luffy.generalandroid.ui.viewHolder.ListViewHolder;
-import com.luffy.generalandroidlib.android.list.adapter.BaseLayerAdapter;
+import com.luffy.recyclerviewlib.adapter.BaseLayerAdapter;
 
 import java.util.List;
 

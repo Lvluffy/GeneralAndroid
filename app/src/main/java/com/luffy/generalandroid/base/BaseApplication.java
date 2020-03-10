@@ -1,7 +1,7 @@
 package com.luffy.generalandroid.base;
 
 
-import com.luffy.generalandroidlib.android.application.BaseLayerApplication;
+import com.luffy.componentlib.application.BaseLayerApplication;
 
 /**
  * Created by lvlufei on 2017/11/24

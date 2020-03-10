@@ -1,9 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.luffy.generalandroidlib">
-    <!-- 网络请求权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--获取Wi-Fi状态-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 网络状态监听权限 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-</manifest>

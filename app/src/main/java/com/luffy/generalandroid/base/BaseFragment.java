@@ -2,8 +2,8 @@ package com.luffy.generalandroid.base;
 
 import android.view.View;
 
+import com.luffy.componentlib.fragment.BaseLayerFragment;
 import com.luffy.generalandroid.R;
-import com.luffy.generalandroidlib.android.fragment.BaseLayerFragment;
 
 import butterknife.ButterKnife;
 
