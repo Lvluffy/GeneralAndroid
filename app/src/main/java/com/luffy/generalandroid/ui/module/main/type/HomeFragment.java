@@ -11,7 +11,7 @@ import com.luffy.generalandroid.helper.IntentHelper;
 import com.luffy.generalandroid.manager.TestDataManager;
 import com.luffy.generalandroid.mvp.model.ListBean;
 import com.luffy.generalandroid.ui.module.list.ListAdapter;
-import com.luffy.generalutilslib.utils.RxTimerUtils;
+import com.luffy.rxlib.RxTimerUtils;
 
 import java.util.concurrent.TimeUnit;
 

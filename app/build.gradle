@@ -51,7 +51,7 @@ dependencies {
     /*通用网络*/
     implementation 'com.github.Lvluffy:GeneralNetwork:1.0.2'
     /*通用工具*/
-    implementation 'com.github.Lvluffy:GeneralUtils:1.0.9'
+    implementation rootProject.ext.generalUtilsLibs
     /*通用弹框*/
     implementation 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
     implementation 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'

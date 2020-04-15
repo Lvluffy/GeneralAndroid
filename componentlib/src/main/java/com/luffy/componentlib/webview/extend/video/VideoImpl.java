@@ -14,7 +14,7 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 
 import com.luffy.componentlib.R;
-import com.luffy.generalutilslib.utils.StatusBarUtils;
+import com.luffy.generallib.StatusBarUtils;
 
 import java.util.HashSet;
 import java.util.Set;

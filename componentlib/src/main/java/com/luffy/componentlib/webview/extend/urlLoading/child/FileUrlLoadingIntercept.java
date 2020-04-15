@@ -3,8 +3,8 @@ package com.luffy.componentlib.webview.extend.urlLoading.child;
 import android.app.Activity;
 
 import com.luffy.componentlib.webview.extend.urlLoading.base.BaseUrlLoadingIntercept;
-import com.luffy.generalutilslib.utils.IntentUtils;
-import com.luffy.generalutilslib.utils.ValidUtils;
+import com.luffy.generallib.IntentUtils;
+import com.luffy.generallib.ValidUtils;
 
 /**
  * Created by lvlufei on 2019/6/20

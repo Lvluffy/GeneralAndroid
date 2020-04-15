@@ -2,7 +2,7 @@ package com.luffy.componentlib.helper;
 
 import com.luffy.componentlib.R;
 import com.luffy.componentlib.application.BaseLayerApplication;
-import com.luffy.generalutilslib.utils.NetUtils;
+import com.luffy.generallib.NetUtils;
 import com.luffy.toastlib.ToastBuilder;
 
 /**

@@ -29,7 +29,7 @@ import com.luffy.componentlib.callback.IBaseLayerNetwork;
 import com.luffy.componentlib.callback.IBaseLayerTitle;
 import com.luffy.componentlib.callback.IBaseLayerUIInit;
 import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
-import com.luffy.generalutilslib.utils.NetUtils;
+import com.luffy.generallib.NetUtils;
 
 /**
  * Created by lvlufei on 2018/1/1

@@ -5,8 +5,8 @@ import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.base.BaseListActivity;
 import com.luffy.generalandroid.manager.TestDataManager;
 import com.luffy.generalandroid.mvp.model.ListBean;
-import com.luffy.generalutilslib.utils.RxTimerUtils;
 import com.luffy.recyclerviewlib.loader.BaseLayerLoadMoreView;
+import com.luffy.rxlib.RxTimerUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +35,7 @@ public class ListActivity extends BaseListActivity {
 
     @Override
     public void detachViewForPresenter() {
-        
+
     }
 
     @Override
