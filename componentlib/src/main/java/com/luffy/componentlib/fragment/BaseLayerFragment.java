@@ -1,11 +1,7 @@
 package com.luffy.componentlib.fragment;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,13 +19,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.luffy.componentlib.R;
-import com.luffy.componentlib.application.BaseLayerApplication;
 import com.luffy.componentlib.callback.IBaseLayerLoading;
 import com.luffy.componentlib.callback.IBaseLayerNetwork;
 import com.luffy.componentlib.callback.IBaseLayerTitle;
 import com.luffy.componentlib.callback.IBaseLayerUIInit;
 import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
-import com.luffy.generallib.NetUtils;
 
 /**
  * Created by lvlufei on 2018/1/1
@@ -80,18 +74,6 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
      */
     protected boolean isInit;
     /**
-     * 网络监听广播
-     */
-    protected BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
-                onNetChange(NetUtils.getInstance().isConnected(BaseLayerApplication.getInstance()));
-            }
-        }
-    };
-    /**
      * 网络加载loading
      */
     protected LoadingDialog mLoadingDialog;
@@ -100,10 +82,6 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
     public void onAttach(Context context) {
         super.onAttach(context);
         isAttach = true;
-        /*注册网络监听广播*/
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        BaseLayerApplication.getInstance().registerReceiver(broadcastReceiver, intentFilter);
     }
 
     @Override
@@ -148,8 +126,6 @@ public abstract class BaseLayerFragment extends Fragment implements View.OnClick
     public void onDetach() {
         super.onDetach();
         isAttach = false;
-        /*注销网络监听广播*/
-        BaseLayerApplication.getInstance().unregisterReceiver(broadcastReceiver);
     }
 
     @Override

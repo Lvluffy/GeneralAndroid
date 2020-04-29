@@ -13,9 +13,6 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
 
-import com.luffy.componentlib.R;
-import com.luffy.generallib.StatusBarUtils;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -152,8 +149,6 @@ public class VideoImpl implements IVideo {
                                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
             }
-            /*沉浸式状态栏*/
-            StatusBarUtils.getInstance().setStatusBar(mActivity, R.color.white, true);
         }
     }
 }

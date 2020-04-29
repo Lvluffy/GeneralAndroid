@@ -22,7 +22,7 @@ import com.luffy.componentlib.webview.extend.urlLoading.child.AlipayUrlLoadingIn
 import com.luffy.componentlib.webview.extend.urlLoading.child.FileUrlLoadingIntercept;
 import com.luffy.componentlib.webview.extend.urlLoading.child.ShortLinkUrlLoadingIntercept;
 import com.luffy.componentlib.webview.extend.urlLoading.child.TelUrlLoadingIntercept;
-import com.luffy.generallib.NetUtils;
+import com.luffy.netlib.NetUtils;
 
 /**
  * Created by lvlufei on 2018/5/21

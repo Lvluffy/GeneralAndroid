@@ -1,11 +1,6 @@
 package com.luffy.componentlib.activity;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -14,8 +9,6 @@ import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,14 +16,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.luffy.componentlib.R;
-import com.luffy.componentlib.application.BaseLayerApplication;
 import com.luffy.componentlib.callback.IBaseLayerLoading;
 import com.luffy.componentlib.callback.IBaseLayerNetwork;
 import com.luffy.componentlib.callback.IBaseLayerTitle;
 import com.luffy.componentlib.callback.IBaseLayerUIInit;
 import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
-import com.luffy.generallib.NetUtils;
-import com.luffy.generallib.StatusBarUtils;
 
 
 /**
@@ -44,7 +34,6 @@ import com.luffy.generallib.StatusBarUtils;
  */
 public abstract class BaseLayerActivity extends AppCompatActivity implements View.OnClickListener,
         IBaseLayerUIInit<Activity>,
-        IBaseLayerActivity,
         IBaseLayerNetwork,
         IBaseLayerLoading,
         IBaseLayerTitle {
@@ -70,41 +59,15 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
      */
     FrameLayout baseChildLayout;
     /**
-     * 网络监听广播
-     */
-    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {
-                onNetChange(NetUtils.getInstance().isConnected(BaseLayerApplication.getInstance()));
-            }
-        }
-    };
-    /**
      * 网络加载loading
      */
     LoadingDialog mLoadingDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        /*不显示标题栏*/
-        if (!visibleTitleBar()) {
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-        }
-        /*不显示信息栏*/
-        if (!visibleInfoBar()) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
-        /*不锁屏(保持屏幕不变黑)*/
-        if (!isLockScreen()) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON, WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        }
         super.onCreate(savedInstanceState);
         mContext = this;
         LayoutInflater mLayoutInflater = mContext.getLayoutInflater();
-        /*沉浸式状态栏*/
-        StatusBarUtils.getInstance().setStatusBar(mContext, R.color.white, true);
         /*绑定布局*/
         setContentView(baseLayoutView());
         /*初始化公共标题栏控件*/
@@ -119,23 +82,6 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
         initView();
         /*初始化Presenter*/
         initPresenter();
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        /*注册网络监听广播*/
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
-        registerReceiver(broadcastReceiver, intentFilter);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        /*注销网络监听广播*/
-        unregisterReceiver(broadcastReceiver);
     }
 
     @Override
@@ -314,36 +260,6 @@ public abstract class BaseLayerActivity extends AppCompatActivity implements Vie
         if (setDividerColor() != 0) {
             navDivider.setBackgroundColor(ContextCompat.getColor(mContext, setDividerColor()));
         }
-    }
-
-    /**
-     * 是否显示系统标题栏
-     *
-     * @return
-     */
-    @Override
-    public boolean visibleTitleBar() {
-        return true;
-    }
-
-    /**
-     * 是否显示信息栏
-     *
-     * @return
-     */
-    @Override
-    public boolean visibleInfoBar() {
-        return true;
-    }
-
-    /**
-     * 是否锁屏
-     *
-     * @return
-     */
-    @Override
-    public boolean isLockScreen() {
-        return true;
     }
 
     /**

@@ -48,7 +48,8 @@ dependencies {
     // 指示器
     compile 'com.github.Lvluffy:Indicator:1.0.0'
     // 通用工具
-    compileOnly rootProject.ext.generalUtilsLibs
+    compileOnly rootProject.ext.generalUtilsDepends['general']
+    compileOnly rootProject.ext.generalUtilsDepends['net']
     // 通用弹框
     compileOnly 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
     compileOnly 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'

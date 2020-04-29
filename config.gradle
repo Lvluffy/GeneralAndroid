@@ -21,9 +21,11 @@ ext {
     ]
 
     generalUtilsDepends = [
-            "general": 'com.github.Lvluffy.GeneralUtils:generallib:1.1.5',
-            "notch"  : 'com.github.Lvluffy.GeneralUtils:notchlib:1.1.5',
-            "rx"     : 'com.github.Lvluffy.GeneralUtils:rxlib:1.1.5'
+            "general": 'com.github.Lvluffy.GeneralUtils:generallib:1.1.7',
+            "notch"  : 'com.github.Lvluffy.GeneralUtils:notchlib:1.1.7',
+            "rx"     : 'com.github.Lvluffy.GeneralUtils:rxlib:1.1.7',
+            "net"    : 'com.github.Lvluffy.GeneralUtils:netlib:1.1.7'
+
     ]
 
     supportLibs = supportDepends.values()
