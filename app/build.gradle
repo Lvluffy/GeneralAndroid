@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
-    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
     /**默认-选项配置*/
     defaultConfig {
-        applicationId rootProject.ext.android.applicationId
-        minSdkVersion rootProject.ext.android.minSdkVersion
-        targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode rootProject.ext.android.versionCode
-        versionName rootProject.ext.android.versionName
+        applicationId rootProject.android.applicationId
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
     }
     /**构建类型-配置*/
     buildTypes {
@@ -41,7 +41,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     /**support*/
-    implementation rootProject.ext.supportLibs
+    implementation rootProject.supportDepends.values()
     /*butterknife*/
     implementation 'com.jakewharton:butterknife:9.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
@@ -51,7 +51,7 @@ dependencies {
     /*通用网络*/
     implementation 'com.github.Lvluffy:GeneralNetwork:1.0.2'
     /*通用工具*/
-    implementation rootProject.ext.generalUtilsLibs
+    implementation rootProject.generalUtilsDepends.values()
     /*通用弹框*/
     implementation 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
     implementation 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'

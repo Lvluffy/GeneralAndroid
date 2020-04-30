@@ -28,6 +28,4 @@ ext {
 
     ]
 
-    supportLibs = supportDepends.values()
-    generalUtilsLibs = generalUtilsDepends.values()
 }
