@@ -25,7 +25,36 @@ ext {
             "notch"  : 'com.github.Lvluffy.GeneralUtils:notchlib:1.1.7',
             "rx"     : 'com.github.Lvluffy.GeneralUtils:rxlib:1.1.7',
             "net"    : 'com.github.Lvluffy.GeneralUtils:netlib:1.1.7'
+    ]
 
+    generalWindowDepends = [
+            "toast"      : 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.3',
+            "dialog"     : 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.3',
+            "popupWindow": 'com.github.Lvluffy.GeneralDialog:popupwindowlib:1.1.3'
+    ]
+
+    generalViewDepends = [
+            "amountEdit"   : 'com.github.Lvluffy.GeneralView:generalamounteditlib:1.2.6',
+            "bottomBar"    : 'com.github.Lvluffy.GeneralView:generalbottombarlib:1.2.6',
+            "button"       : 'com.github.Lvluffy.GeneralView:generalbuttonlib:1.2.6',
+            "empty"        : 'com.github.Lvluffy.GeneralView:generalemptylib:1.2.6',
+            "flipper"      : 'com.github.Lvluffy.GeneralView:generalflipper:1.2.6',
+            "ratingBar"    : 'com.github.Lvluffy.GeneralView:generalratingbarlib:1.2.6',
+            "spinner"      : 'com.github.Lvluffy.GeneralView:generalspinnerlib:1.2.6',
+            "tag"          : 'com.github.Lvluffy.GeneralView:generaltaglib:1.2.6',
+            "textIndicator": 'com.github.Lvluffy.GeneralView:generaltextindicatorlib:1.2.6',
+            "textSpan"     : 'com.github.Lvluffy.GeneralView:generaltextspanlib:1.2.6',
+            "textWatcher"  : 'com.github.Lvluffy.GeneralView:generaltextwatcherlib:1.2.6',
+            "wheel"        : 'com.github.Lvluffy.GeneralView:generalwheellib:1.2.6',
+            "playingIcon"  : 'com.github.Lvluffy.GeneralView:playingiconlib:1.2.6',
+            "radarScan"    : 'com.github.Lvluffy.GeneralView:radarscanlib:1.2.6',
+            "randomText"   : 'com.github.Lvluffy.GeneralView:randomtextlib:1.2.6'
+    ]
+
+    generalLifecycleDepends = [
+            "screen"   : 'com.github.Lvluffy.GeneralLifecycle:screenlib:1.0.3',
+            "statusbar": 'com.github.Lvluffy.GeneralLifecycle:statusbarlib:1.0.3',
+            "lamen"    : 'com.github.Lvluffy.GeneralLifecycle:lamentlib:1.0.3'
     ]
 
 }

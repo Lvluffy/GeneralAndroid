@@ -23,7 +23,7 @@ import com.luffy.componentlib.callback.IBaseLayerLoading;
 import com.luffy.componentlib.callback.IBaseLayerNetwork;
 import com.luffy.componentlib.callback.IBaseLayerTitle;
 import com.luffy.componentlib.callback.IBaseLayerUIInit;
-import com.luffy.dialoglib.dialog.loadingDialog.LoadingDialog;
+import com.luffy.window.dialoglib.dialog.loadingDialog.LoadingDialog;
 
 /**
  * Created by lvlufei on 2018/1/1

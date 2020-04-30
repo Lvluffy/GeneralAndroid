@@ -52,12 +52,11 @@ dependencies {
     implementation 'com.github.Lvluffy:GeneralNetwork:1.0.2'
     /*通用工具*/
     implementation rootProject.generalUtilsDepends.values()
-    /*通用弹框*/
-    implementation 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
-    implementation 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'
+    /*通用窗口*/
+    implementation rootProject.generalWindowDepends.values()
     /*通用视图*/
-    implementation 'com.github.Lvluffy:GeneralView:1.1.9'
+    implementation rootProject.generalViewDepends.values()
     /*生命周期-状态栏*/
-    implementation 'com.github.Lvluffy.GeneralLifecycle:statusbarlib:1.0.3'
+    implementation rootProject.generalLifecycleDepends['statusbar']
 }
 

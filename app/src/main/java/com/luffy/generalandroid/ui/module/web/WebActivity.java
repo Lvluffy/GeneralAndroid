@@ -11,7 +11,7 @@ import android.webkit.WebView;
 
 import com.luffy.componentlib.webview.core.ui.BaseLayerWebviewActivity;
 import com.luffy.generalandroid.R;
-import com.luffy.generalviewlib.combinationView.child.empty.GeneralEmpty;
+import com.luffy.view.generalemptylib.GeneralEmpty;
 
 import java.util.Map;
 

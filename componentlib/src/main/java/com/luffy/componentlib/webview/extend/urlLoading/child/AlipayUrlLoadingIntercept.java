@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 import com.luffy.componentlib.webview.extend.urlLoading.base.BaseUrlLoadingIntercept;
-import com.luffy.toastlib.ToastBuilder;
+import com.luffy.window.toastlib.ToastBuilder;
 
 /**
  * Created by lvlufei on 2019/6/20

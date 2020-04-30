@@ -45,12 +45,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     /**support*/
     compileOnly rootProject.supportDepends["appcompat-v7" ]
-    // 指示器
-    compile 'com.github.Lvluffy:Indicator:1.0.0'
-    // 通用工具
-    compileOnly rootProject.generalUtilsDepends['general']
-    compileOnly rootProject.generalUtilsDepends['net']
-    // 通用弹框
-    compileOnly 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.1'
-    compileOnly 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.1'
+    /*指示器*/
+    api 'com.github.Lvluffy:Indicator:1.0.0'
+    /*通用工具*/
+    compileOnly rootProject.generalUtilsDepends.values()
+    /*通用窗口*/
+    compileOnly rootProject.generalWindowDepends.values()
 }

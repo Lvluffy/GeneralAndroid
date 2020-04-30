@@ -19,7 +19,7 @@
         android:layout_above="@+id/bottom_bar"
         android:background="@drawable/base_shadow_line" />
 
-    <com.luffy.generalviewlib.customView.bottomBar.BottomBarLayout
+    <com.luffy.view.generalbottombarlib.BottomBarLayout
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -28,7 +28,7 @@
         android:gravity="bottom">
 
         <!--首页-->
-        <com.luffy.generalviewlib.customView.bottomBar.BottomBarItem
+        <com.luffy.view.generalbottombarlib.BottomBarItem
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="2dp"
@@ -46,7 +46,7 @@
             app:textColorSelected="@color/color_5096F5" />
 
         <!--消息-->
-        <com.luffy.generalviewlib.customView.bottomBar.BottomBarItem
+        <com.luffy.view.generalbottombarlib.BottomBarItem
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
@@ -61,7 +61,7 @@
             app:textColorSelected="@color/color_5096F5" />
 
         <!--我的-->
-        <com.luffy.generalviewlib.customView.bottomBar.BottomBarItem
+        <com.luffy.view.generalbottombarlib.BottomBarItem
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="2dp"
@@ -78,6 +78,6 @@
             app:textColorNormal="@color/color_999999"
             app:textColorSelected="@color/color_5096F5" />
 
-    </com.luffy.generalviewlib.customView.bottomBar.BottomBarLayout>
+    </com.luffy.view.generalbottombarlib.BottomBarLayout>
 
 </RelativeLayout>
