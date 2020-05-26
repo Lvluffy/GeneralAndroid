@@ -49,7 +49,7 @@ dependencies {
     implementation project(':componentlib')
     implementation project(':recyclerviewlib')
     /*通用网络*/
-    implementation 'com.github.Lvluffy:GeneralNetwork:1.0.2'
+    implementation rootProject.generalNetworkDepends.values()
     /*通用工具*/
     implementation rootProject.generalUtilsDepends.values()
     /*通用窗口*/

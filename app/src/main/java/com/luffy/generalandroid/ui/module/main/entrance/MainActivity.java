@@ -9,7 +9,7 @@ import com.luffy.generalandroid.base.BaseActivity;
 import com.luffy.generalandroid.ui.module.main.type.HomeFragment;
 import com.luffy.generalandroid.ui.module.main.type.MessageFragment;
 import com.luffy.generalandroid.ui.module.main.type.UserCenterFragment;
-import com.luffy.generallib.StatusBarUtils;
+import com.luffy.lifycycle.statusbarlib.StatusBarUtils;
 import com.luffy.view.generalbottombarlib.BottomBarItem;
 import com.luffy.view.generalbottombarlib.BottomBarLayout;
 

@@ -11,7 +11,12 @@ ext {
 
     dependVersion = [
             supportConstraintLayout: "1.1.3",
-            supportVersion         : "28.0.0"
+            supportVersion         : "28.0.0",
+            generalUtils           : "1.2.1",
+            generalWindow          : "1.1.4",
+            generalView            : "1.2.6",
+            generalNetwork         : "1.0.8",
+            generalLifecycle       : "1.0.8"
     ]
 
     supportDepends = [
@@ -21,40 +26,49 @@ ext {
     ]
 
     generalUtilsDepends = [
-            "general": 'com.github.Lvluffy.GeneralUtils:generallib:1.1.7',
-            "notch"  : 'com.github.Lvluffy.GeneralUtils:notchlib:1.1.7',
-            "rx"     : 'com.github.Lvluffy.GeneralUtils:rxlib:1.1.7',
-            "net"    : 'com.github.Lvluffy.GeneralUtils:netlib:1.1.7'
+            "general" : "com.github.Lvluffy.GeneralUtils:generallib:${dependVersion.generalUtils}",
+            "bitmap"  : "com.github.Lvluffy.GeneralUtils:bitmaplib:${dependVersion.generalUtils}",
+            "file"    : "com.github.Lvluffy.GeneralUtils:filelib:${dependVersion.generalUtils}",
+            "security": "com.github.Lvluffy.GeneralUtils:securitylib:${dependVersion.generalUtils}",
+            "notch"   : "com.github.Lvluffy.GeneralUtils:notchlib:${dependVersion.generalUtils}",
+            "rx"      : "com.github.Lvluffy.GeneralUtils:rxlib:${dependVersion.generalUtils}",
+            "net"     : "com.github.Lvluffy.GeneralUtils:netlib:${dependVersion.generalUtils}"
     ]
 
     generalWindowDepends = [
-            "toast"      : 'com.github.Lvluffy.GeneralDialog:toastlib:1.1.3',
-            "dialog"     : 'com.github.Lvluffy.GeneralDialog:dialoglib:1.1.3',
-            "popupWindow": 'com.github.Lvluffy.GeneralDialog:popupwindowlib:1.1.3'
+            "toast"      : "com.github.Lvluffy.GeneralDialog:toastlib:${dependVersion.generalWindow}",
+            "dialog"     : "com.github.Lvluffy.GeneralDialog:dialoglib:${dependVersion.generalWindow}",
+            "popupWindow": "com.github.Lvluffy.GeneralDialog:popupwindowlib:${dependVersion.generalWindow}"
     ]
 
     generalViewDepends = [
-            "amountEdit"   : 'com.github.Lvluffy.GeneralView:generalamounteditlib:1.2.6',
-            "bottomBar"    : 'com.github.Lvluffy.GeneralView:generalbottombarlib:1.2.6',
-            "button"       : 'com.github.Lvluffy.GeneralView:generalbuttonlib:1.2.6',
-            "empty"        : 'com.github.Lvluffy.GeneralView:generalemptylib:1.2.6',
-            "flipper"      : 'com.github.Lvluffy.GeneralView:generalflipper:1.2.6',
-            "ratingBar"    : 'com.github.Lvluffy.GeneralView:generalratingbarlib:1.2.6',
-            "spinner"      : 'com.github.Lvluffy.GeneralView:generalspinnerlib:1.2.6',
-            "tag"          : 'com.github.Lvluffy.GeneralView:generaltaglib:1.2.6',
-            "textIndicator": 'com.github.Lvluffy.GeneralView:generaltextindicatorlib:1.2.6',
-            "textSpan"     : 'com.github.Lvluffy.GeneralView:generaltextspanlib:1.2.6',
-            "textWatcher"  : 'com.github.Lvluffy.GeneralView:generaltextwatcherlib:1.2.6',
-            "wheel"        : 'com.github.Lvluffy.GeneralView:generalwheellib:1.2.6',
-            "playingIcon"  : 'com.github.Lvluffy.GeneralView:playingiconlib:1.2.6',
-            "radarScan"    : 'com.github.Lvluffy.GeneralView:radarscanlib:1.2.6',
-            "randomText"   : 'com.github.Lvluffy.GeneralView:randomtextlib:1.2.6'
+            "amountEdit"   : "com.github.Lvluffy.GeneralView:generalamounteditlib:${dependVersion.generalView}",
+            "bottomBar"    : "com.github.Lvluffy.GeneralView:generalbottombarlib:${dependVersion.generalView}",
+            "button"       : "com.github.Lvluffy.GeneralView:generalbuttonlib:${dependVersion.generalView}",
+            "empty"        : "com.github.Lvluffy.GeneralView:generalemptylib:${dependVersion.generalView}",
+            "flipper"      : "com.github.Lvluffy.GeneralView:generalflipper:${dependVersion.generalView}",
+            "ratingBar"    : "com.github.Lvluffy.GeneralView:generalratingbarlib:${dependVersion.generalView}",
+            "spinner"      : "com.github.Lvluffy.GeneralView:generalspinnerlib:${dependVersion.generalView}",
+            "tag"          : "com.github.Lvluffy.GeneralView:generaltaglib:${dependVersion.generalView}",
+            "textIndicator": "com.github.Lvluffy.GeneralView:generaltextindicatorlib:${dependVersion.generalView}",
+            "textSpan"     : "com.github.Lvluffy.GeneralView:generaltextspanlib:${dependVersion.generalView}",
+            "textWatcher"  : "com.github.Lvluffy.GeneralView:generaltextwatcherlib:${dependVersion.generalView}",
+            "wheel"        : "com.github.Lvluffy.GeneralView:generalwheellib:${dependVersion.generalView}",
+            "playingIcon"  : "com.github.Lvluffy.GeneralView:playingiconlib:${dependVersion.generalView}",
+            "radarScan"    : "com.github.Lvluffy.GeneralView:radarscanlib:${dependVersion.generalView}",
+            "randomText"   : "com.github.Lvluffy.GeneralView:randomtextlib:${dependVersion.generalView}"
+    ]
+
+    generalNetworkDepends = [
+            "api": "com.github.Lvluffy.GeneralNetwork:apilib:${dependVersion.generalNetwork}",
+            "mvp": "com.github.Lvluffy.GeneralNetwork:mvplib:${dependVersion.generalNetwork}"
     ]
 
     generalLifecycleDepends = [
-            "screen"   : 'com.github.Lvluffy.GeneralLifecycle:screenlib:1.0.3',
-            "statusbar": 'com.github.Lvluffy.GeneralLifecycle:statusbarlib:1.0.3',
-            "lamen"    : 'com.github.Lvluffy.GeneralLifecycle:lamentlib:1.0.3'
+            "screen"   : "com.github.Lvluffy.GeneralLifecycle:screenlib:${dependVersion.generalLifecycle}",
+            "statusbar": "com.github.Lvluffy.GeneralLifecycle:statusbarlib:${dependVersion.generalLifecycle}",
+            "lamen"    : "com.github.Lvluffy.GeneralLifecycle:lamentlib:${dependVersion.generalLifecycle}",
+            "titlebar" : "com.github.Lvluffy.GeneralLifecycle:titlebarlib:${dependVersion.generalLifecycle}"
     ]
 
 }
