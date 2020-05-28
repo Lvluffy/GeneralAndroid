@@ -46,6 +46,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void detachViewForPresenter() {
+
     }
 
     @Override
