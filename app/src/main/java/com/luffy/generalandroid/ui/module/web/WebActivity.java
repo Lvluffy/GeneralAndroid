@@ -70,6 +70,7 @@ public class WebActivity extends BaseLayerWebviewActivity {
     @Override
     public void handlerErrorView() {
         super.handlerErrorView();
+
         errorView = new GeneralEmpty(mContext)
                 .setEmptyLayoutGravity(Gravity.CENTER)
                 .setEmptyImg(R.drawable.user_center_bg)
