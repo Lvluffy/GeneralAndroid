@@ -1,4 +1,4 @@
-package com.luffy.generalandroid.ui.module.main.type;
+package com.luffy.generalandroid.ui.module.main;
 
 
 import com.luffy.generalandroid.R;

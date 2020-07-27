@@ -58,5 +58,6 @@ dependencies {
     implementation rootProject.generalViewDepends.values()
     /*生命周期-状态栏*/
     implementation rootProject.generalLifecycleDepends['statusbar']
+    implementation project(path: ':listviewlib')
 }
 
