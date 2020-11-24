@@ -3,10 +3,6 @@ package com.luffy.generalandroid.ui.module.main;
 
 import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.base.BaseFragment;
-import com.luffy.generalandroid.helper.IntentHelper;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import butterknife.OnClick;
 
@@ -43,12 +39,8 @@ public class UserCenterFragment extends BaseFragment {
     }
 
     @OnClick(R.id.item_set)
-
     public void onViewClicked() {
-        Map<String, Object> mapWeb = new HashMap<>();
-        mapWeb.put("url", "https://www.baidu.com");
-        mapWeb.put("title", "测试");
-        IntentHelper.Web.gotoWebActivity(mContext, mapWeb);
+
     }
 
 }
