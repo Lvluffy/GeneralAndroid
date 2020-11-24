@@ -5,8 +5,8 @@ ext {
             minSdkVersion    : 15,
             targetSdkVersion : 28,
             applicationId    : "com.luffy.generalandroid",
-            versionCode      : 122,
-            versionName      : "1.2.2"
+            versionCode      : 123,
+            versionName      : "1.2.3"
     ]
 
     dependVersion = [
