@@ -10,7 +10,6 @@ import android.util.TypedValue;
 import android.view.View;
 
 import com.luffy.componentlib.R;
-import com.luffy.componentlib.application.BaseLayerApplication;
 import com.luffy.componentlib.fragment.BaseLayerFragment;
 import com.luffy.componentlib.fragment.BaseLayerFragmentStatePageAdapter;
 import com.luffy.componentlib.tabIndicator.model.BaseLayerTabIndicatorItemModel;
@@ -47,10 +46,10 @@ public abstract class BaseLayerTabIndicatorFragment extends BaseLayerFragment im
     private float indicatorTextSize = 16;
     private int indicatorTextStyle = Typeface.NORMAL;
     private int indicatorNormalColor = Color.GRAY;
-    private int indicatorSelectedColor = ContextCompat.getColor(BaseLayerApplication.getInstance(), R.color.colorPrimary);
+    private int indicatorSelectedColor = ContextCompat.getColor(getActivity(), R.color.colorPrimary);
     private int indicatorMode = LinePagerIndicator.MODE_WRAP_CONTENT;
     private float indicatorLineHeight = 5;
-    private int indicatorColor = ContextCompat.getColor(BaseLayerApplication.getInstance(), R.color.colorPrimary);
+    private int indicatorColor = ContextCompat.getColor(getActivity(), R.color.colorPrimary);
 
     @Override
     public int setLayoutView() {

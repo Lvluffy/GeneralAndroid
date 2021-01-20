@@ -44,11 +44,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     /**support*/
-    compileOnly rootProject.supportDepends["appcompat-v7" ]
+    compileOnly rootProject.supportDepends.values()
     /*指示器*/
     api 'com.github.Lvluffy:Indicator:1.0.0'
-    /*通用工具*/
-    compileOnly rootProject.generalUtilsDepends.values()
-    /*通用窗口*/
-    compileOnly rootProject.generalWindowDepends.values()
 }

@@ -44,6 +44,7 @@ dependencies {
     implementation rootProject.supportDepends.values()
     /*butterknife*/
     implementation 'com.jakewharton:butterknife:9.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
     /**project*/
     implementation project(':componentlib')
@@ -56,8 +57,7 @@ dependencies {
     implementation rootProject.generalWindowDepends.values()
     /*通用视图*/
     implementation rootProject.generalViewDepends.values()
-    /*生命周期-状态栏*/
-    implementation rootProject.generalLifecycleDepends['statusbar']
+    /*生命周期*/
+    implementation rootProject.generalLifecycleDepends.values()
     implementation project(path: ':listviewlib')
 }
-

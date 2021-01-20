@@ -16,7 +16,7 @@ ext {
             generalWindow          : "1.1.4",
             generalView            : "1.2.6",
             generalNetwork         : "1.0.8",
-            generalLifecycle       : "1.0.8"
+            generalLifecycle       : "1.1.2"
     ]
 
     supportDepends = [

@@ -1,36 +1,28 @@
 package com.luffy.generalandroid.ui.module.list;
 
-import com.google.gson.Gson;
 import com.luffy.generalandroid.R;
-import com.luffy.generalandroid.base.BaseListActivity;
-import com.luffy.generalandroid.manager.TestDataManager;
-import com.luffy.generalandroid.mvp.model.ListBean;
-import com.luffy.recyclerviewlib.loader.BaseLayerLoadMoreView;
-import com.luffy.utils.rxlib.RxTimerUtils;
-
-import java.util.concurrent.TimeUnit;
+import com.luffy.generalandroid.base.BaseActivity;
 
 /**
  * Created by lvlufei on 2019/4/29
  *
  * @desc
  */
-public class ListActivity extends BaseListActivity {
-
-    /*适配器*/
-    ListAdapter adapter;
-
-    /*数据*/
-    ListBean mListBean;
+public class ListActivity extends BaseActivity {
 
     @Override
     public int setLayoutView() {
-        return R.layout.activity_recycle_view;
+        return 0;
+    }
+
+    @Override
+    public void initView() {
+        replaceFragment(this, R.id.base_child_layout, new ListFragment());
     }
 
     @Override
     public void initPresenter() {
-        onRefresh();
+
     }
 
     @Override
@@ -38,43 +30,15 @@ public class ListActivity extends BaseListActivity {
 
     }
 
-    @Override
-    public void initReceiveData() {
-
-    }
-
-    @Override
-    public void initAdapter() {
-        if (adapter == null) {
-            adapter = new ListAdapter(null);
-            adapter.setOnLoadMoreListener(this, recyclerView);
-            adapter.setLoadMoreView(new BaseLayerLoadMoreView());
-        }
-        recyclerView.setAdapter(adapter);
-    }
-
-    @Override
-    public void onRefresh() {
-        swipeRefreshLayout.setRefreshing(true);
-        requestData();
-    }
-
-    @Override
-    public void onLoadMoreRequested() {
-        requestData();
-    }
-
-    private void requestData() {
-        mListBean = new Gson().fromJson(TestDataManager.message, ListBean.class);
-        /*延时操作*/
-        RxTimerUtils.getInstance().interval(2, TimeUnit.SECONDS, new RxTimerUtils.IRxNext() {
-            @Override
-            public void doNext(long l) {
-                swipeRefreshLayout.setRefreshing(false);
-                adapter.setNewData(mListBean.getBody());
-                adapter.loadMoreEnd();
-                recyclerView.scrollToPosition(0);
-            }
-        });
+    public void replaceFragment(android.support.v4.app.FragmentActivity activity, int resId, android.support.v4.app.Fragment target) {
+        if (activity == null) return;
+        //碎片管理器
+        android.support.v4.app.FragmentManager manager = activity.getSupportFragmentManager();
+        //碎片事务
+        android.support.v4.app.FragmentTransaction transaction = manager.beginTransaction();
+        //替换
+        transaction.replace(resId, target, target.getClass().getName());
+        //提交
+        transaction.commitAllowingStateLoss();
     }
 }

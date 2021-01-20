@@ -5,8 +5,6 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <include layout="@layout/base_title_layout" />
-
     <FrameLayout
         android:id="@+id/base_child_layout"
         android:layout_width="match_parent"

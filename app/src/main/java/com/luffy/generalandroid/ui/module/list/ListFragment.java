@@ -1,26 +1,20 @@
-package com.luffy.generalandroid.ui.module.main;
+package com.luffy.generalandroid.ui.module.list;
 
+import android.support.v4.app.Fragment;
 
-import android.view.View;
-
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.google.gson.Gson;
-import com.luffy.generalandroid.R;
 import com.luffy.generalandroid.base.BaseListFragment;
-import com.luffy.generalandroid.helper.IntentHelper;
 import com.luffy.generalandroid.manager.TestDataManager;
 import com.luffy.generalandroid.mvp.model.ListBean;
-import com.luffy.generalandroid.ui.module.list.ListAdapter;
+import com.luffy.recyclerviewlib.loader.BaseLayerLoadMoreView;
 import com.luffy.utils.rxlib.RxTimerUtils;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by lvlufei on 2018/1/1
- *
- * @desc 首页
+ * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends BaseListFragment {
+public class ListFragment extends BaseListFragment {
 
     /*适配器*/
     ListAdapter adapter;
@@ -29,8 +23,8 @@ public class HomeFragment extends BaseListFragment {
     ListBean mListBean;
 
     @Override
-    public int setLayoutView() {
-        return R.layout.fragment_home;
+    public void initReceiveData() {
+
     }
 
     @Override
@@ -44,25 +38,6 @@ public class HomeFragment extends BaseListFragment {
     }
 
     @Override
-    public void initReceiveData() {
-
-    }
-
-    @Override
-    public void initAdapter() {
-        if (adapter == null) {
-            adapter = new ListAdapter(null);
-        }
-        recyclerView.setAdapter(adapter);
-        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-                IntentHelper.List.gotoListActivity(mContext, null);
-            }
-        });
-    }
-
-    @Override
     public void onRefresh() {
         swipeRefreshLayout.setRefreshing(true);
         requestData();
@@ -70,6 +45,17 @@ public class HomeFragment extends BaseListFragment {
 
     @Override
     public void onLoadMoreRequested() {
+
+    }
+
+    @Override
+    public void initAdapter() {
+        if (adapter == null) {
+            adapter = new ListAdapter(null);
+            adapter.setOnLoadMoreListener(this, recyclerView);
+            adapter.setLoadMoreView(new BaseLayerLoadMoreView());
+        }
+        recyclerView.setAdapter(adapter);
     }
 
     private void requestData() {
