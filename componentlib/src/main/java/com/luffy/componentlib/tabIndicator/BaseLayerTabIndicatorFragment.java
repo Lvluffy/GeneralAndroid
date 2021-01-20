@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.View;
@@ -46,10 +45,10 @@ public abstract class BaseLayerTabIndicatorFragment extends BaseLayerFragment im
     private float indicatorTextSize = 16;
     private int indicatorTextStyle = Typeface.NORMAL;
     private int indicatorNormalColor = Color.GRAY;
-    private int indicatorSelectedColor = ContextCompat.getColor(getActivity(), R.color.colorPrimary);
+    private int indicatorSelectedColor = Color.BLUE;
     private int indicatorMode = LinePagerIndicator.MODE_WRAP_CONTENT;
     private float indicatorLineHeight = 5;
-    private int indicatorColor = ContextCompat.getColor(getActivity(), R.color.colorPrimary);
+    private int indicatorColor = Color.BLUE;
 
     @Override
     public int setLayoutView() {
