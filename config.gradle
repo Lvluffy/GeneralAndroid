@@ -12,10 +12,10 @@ ext {
     dependVersion = [
             supportConstraintLayout: "1.1.3",
             supportVersion         : "28.0.0",
-            generalUtils           : "1.2.1",
+            generalUtils           : "1.3.2",
             generalWindow          : "1.1.4",
-            generalView            : "1.2.6",
-            generalNetwork         : "1.0.8",
+            generalView            : "1.2.8",
+            generalNetwork         : "1.0.9",
             generalLifecycle       : "1.1.2"
     ]
 

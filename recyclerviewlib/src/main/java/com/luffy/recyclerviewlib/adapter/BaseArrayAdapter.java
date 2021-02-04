@@ -1,4 +1,4 @@
-package com.luffy.android.listviewlib.adapter;
+package com.luffy.recyclerviewlib.adapter;
 
 import android.content.Context;
 import android.view.View;
